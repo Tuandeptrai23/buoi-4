@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none;
+}
+div{
+    background-color: aqua;
+}

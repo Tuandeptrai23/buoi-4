@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các cách sử dụng CSS</title>
+    <style>
+        /* Có 4 cách tượng tác với thẻ HTML */
+        /* Tương tác với tên thẻ */
+        h3{
+            color: blue;
+        }
+        /* tương tác với tên id của thẻ */
+        #css-in-file{
+            background-color: black;
+        }
+        /* Tương tác với class của thẻ HTML */
+        .bg-{
+            background-color: blueviolet;
+        }
+        /* tuong tác với tên thuộc tính */
+        input[type="text"]{
+            border: 3px solid #b112b1;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Có 3 cách sử dụng CSS -->
+    <!--Cách 1: CSS trực tiếp trên thẻ HTML -->
+        <h2 style="color: red;">CSS trực tiếp trên HTML</h2>
+    <!-- Cách 2: CSS trong file HTML -->
+     <h3 id="css-in-file">CSS trong file HTML</h3>
+     <!-- cách 3: CSS ngoài HTML - Link -->
+      <div>
+        <h3 class="bg-">CSS ngoài file HTMl - Link đến file CSS</h3>
+        <p class="bg-">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, recusandae at. In iste blanditiis aspernatur libero, natus voluptatum, voluptatibus eos aliquid provident sapiente soluta alias suscipit tempore cumque illo temporibus.
+        </p>
+      </div>
+      <form action="">
+        <div>
+            <label for="username">UserName</label>
+        <input type="text" name="username" id="username"><br>
+        </div>
+        <div>
+            <label for="username">UserName</label>
+        <input type="password" name="password" id="password"><br>
+        </div>
+
+      </form>
+      <a href="#">Trang text</a>
+</body>
+</html>

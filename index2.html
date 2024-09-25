@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* Tag01 Tag02 - css cho giá trị có Tag02 nằm trong tag01 */
+        section div{
+            background-color: aqua;
+        }
+        section p{
+            color: red;
+        }
+        /* Tag01,Tag02 - Css cho cả Tag01 và Tag02 */
+        h2,h3{
+            color: blue;
+            background-color: blanchedalmond;
+        }
+        /*  
+        h2{
+            color: blue;
+            background-color: blanchedalmond;
+        } */
+        /*  
+        h3{
+            color: blue;
+            background-color: blanchedalmond;
+        } */
+         /* Tag01 + tag02 - CSS cho các thành phần Tag02 kế sau tag01 */
+         h3+div{
+            background-color: aquamarine;
+         }
+         div+div{
+            border: 4px solid #bbb;
+         }
+         /* Tag01>Tag02 - CSS cho các thành phần Tag02 là thành phần con của Tag01  */
+         section>h3{
+            border: solid #ddd 4px;
+            color: black;
+         }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h2>Tag01 Tag02</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officia exercitationem asperiores veritatis et blanditiis ducimus quaerat totam ea, in unde tenetur molestiae omnis voluptatum magnam voluptate distinctio facere accusantium!
+            </p>
+        </div>
+    </section>
+    <div>
+        <h3>Tag01,Tag02</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea in eligendi officiis reiciendis praesentium, natus corporis quos amet minima? Quasi, ut vitae recusandae veniam dolor fugit corporis perspiciatis corrupti voluptatibus!
+        </p>
+    </div>
+    <div>
+        <h3>Tag01+Tag02</h3>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit debitis possimus dolorem ipsum porro dolor quasi, tempora ab temporibus ratione quisquam? Necessitatibus incidunt architecto impedit fugiat odio neque maiores alias.
+        </div>
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit culpa qui vitae sapiente sed officiis blanditiis harum autem labore obcaecati exercitationem numquam repellat, earum voluptatum, excepturi impedit sequi quos reprehenderit?
+        </div>
+    </div>
+
+    <section>
+        <h3>Tag01>Tag02</h3>
+         <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse inventore explicabo velit, asperiores deleniti iste, possimus adipisci dolorum non maiores ratione vitae illo voluptatibus sapiente tenetur sed, sit officia ullam?</p>
+         </div>   
+        
+    </section>
+</body>
+</html>

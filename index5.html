@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: #fff7f7;
+            padding: 0.25rem;
+        }
+        ul{
+            padding: 0;
+        }
+        ul li{
+            position: relative;
+            /* Bỏ thuộc tính list */
+            list-style: none;
+             /* trên dưới tái phải : cách 0.5rem */
+             padding: 0.5rem;
+            /* trên dưới 0.5rem */
+            /* padding: 0.5rem 0.5rem; */
+            /* trên 0.5rem trái phải */
+            /* padding: 0.5rem 0.5rem 0.5rem;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem; */
+            
+
+        }
+        #menu-1>li+li::before{
+            position: absolute;
+            content: "";
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: red;
+            z-index: 2;
+        }
+       
+        a{
+            /* Bỏ gạch dưới */
+            text-decoration: none;
+            /* chỉnh màu chữ */
+            color: #000;
+            /* opacity : làm mờ chạy từ 0 - 1 */
+            opacity: 0.8;
+            padding: 0.5;
+        }
+        #menu-1{
+        display: flex;
+    }
+    #menu-2{
+        /* ẩn meneu 2 */
+        /* display: none; */
+        background-color: #ccc;
+        position: absolute;
+        width: 300px;
+        border :solid #ccc;
+        border-top: none;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        
+    }
+    #menu-1>li:hover #menu-2{
+        display: none;
+    }
+    ul li:hover{
+        background-color: green;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="menu-1">
+            <li><a href="#">Trang Chủ</a></li>
+            <li>
+                <a href="#">Khóa Học</a>
+                    <ul id="menu-2">
+                        <li><a href="#">Lập trình Web PHP & MySql</a></li>
+                        <li><a href="#">Lập trình Web với NEtCORE</a></li>
+                        <li><a href="#">Lập trình Web với Springboot</a></li>
+                    </ul>
+            </li>
+            <li><a href="#">Dịch Vụ</a></li>
+            <li><a href="#">Hỗ Trợ</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
