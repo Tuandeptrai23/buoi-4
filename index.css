@@ -1,11 +1,45 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+nav#navTop{
+    width: 960px;/* thiết lập chiều rộng cho menu */
+    margin: 0 auto;/* đặt menu luôn hiển thị giữa màn hình */
+    background: #ccc;/* thiết lập màu nền cho menu */
+    height: 40px;/* thiết lập chiều cao cho menu */
 }
-a{
-    text-decoration: none;
+nav#navTop ul{/* thiết lập cho tất cả các thẻ UL nằm trong #navTop */
+    list-style: none;/* bỏ style mặc định của ul và li */
+    padding: 0;/* thiết lập padding về 0 */
+    margin: 0;/* thiết lập margin về 0 */
+
+    position: relative;/* thiết lập hiện thị cho thẻ li cấp cha */
 }
-div{
-    background-color: aqua;
+nav#navTop ul li{
+    float: left;/* hiển thị li theo chiều trái -->phải */
+    border-right: solid 1px #fff;/* đặt border-right cho thẻ li */
+}
+nav#navTop ul li a{
+    text-decoration: none;/* bỏ gạch chân thẻ a */
+    display: block;/* thiết lập thẻ a hiển thị theo khối block */
+    padding: 10px 30px;/* thiết lập padding trên dưới phải trái cho thẻ a  */
+}
+/* thiết lập khi thẻ a được hover hoặc nhận class là seletced */
+.selected,
+nav#navTop ul li a:hover{
+    background: red;/* đặt màu nền cho thẻ a  */
+    color: #fff;/* đặt màu chữ cho thẻ a */
+}
+/* viết css cho menu cấp 2 */
+nav#navTop ul li>ul{/* thiết lập cho các thẻ ul là con của thẻ li */
+    position: absolute;/* thiết lập hiển thị cấp 2 cho ul */
+    width: 159px;/* thiết lập chiều rộng cho ul cấp 2 */
+    background: #666;
+    visibility: hidden;/* thiết lập mặc định ẩn của menu cấp 2 */
+}
+nav#navTop ul li>ul li {
+    /* thiết lập đường viền botom cho menu cấp 2 */
+    border-bottom: solid 1px #fff;
+}
+/* menu cấp N */
+nav#navTop ul li>ul li >ul{
+    /* menu cấp N lệch sang trái bằng kích thước menu cấp cha */
+    margin-left: 159px;
+    margin-top: -40px;
 }
